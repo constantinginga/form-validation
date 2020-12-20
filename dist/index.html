@@ -8,12 +8,61 @@
   </head>
   <body>
     <div id="container">
-      <h1 id="title">Get started with your account</h1>
+      <div id="img-container">
+        <img src="" alt="Image of donut in a cup of coffee" id="img" />
+      </div>
+      <div id="info">
+        <h1 id="title">Get started with your account</h1>
+        <p id="details">
+          Connect with coffee lovers from all over the world. Explore unique
+          recipes. Discover new tastes.
+        </p>
+      </div>
       <form novalidate>
-        <label for="username">
-          <span>Username</span>
-          <input type="text" name="username" id="username" required />
-        </label>
+        <div>
+          <label for="username">
+            <span>Username</span>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              required
+              minlength="6"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </div>
+        <div>
+          <label for="email">
+            <span>Email</span>
+            <input type="email" name="email" id="email" />
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </div>
+        <div>
+          <label for="password">
+            <span>Password</span>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              minlength="8"
+            />
+            <span class="error" id="password-error" aria-live="polite">
+              <ul id="password-reqs">
+                <li class="req">One uppercase character</li>
+                <li class="req">One number</li>
+                <li class="req">One special character</li>
+                <li class="req">8 characters minimum</li>
+              </ul>
+            </span>
+          </label>
+        </div>
+        <button>Sign Up</button>
+        <p>
+          By clicking the "Sign Up" button, you agree to the
+          <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+        </p>
       </form>
     </div>
   </body>
