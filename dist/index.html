@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <script src="./main.js" defer></script>
-    <title>Form validation</title>
+    <title>Dozy Donut</title>
   </head>
   <body>
     <div id="container">
@@ -12,14 +17,15 @@
         <img src="" alt="Image of donut in a cup of coffee" id="img" />
       </div>
       <div id="info">
-        <h1 id="title">Get started with your account</h1>
-        <p id="details">
+        <h1 id="title">Get started with your <span>account</span></h1>
+        <p class="details">
           Connect with coffee lovers from all over the world. Explore unique
-          recipes. Discover new tastes.
+          recipes. Discover new tastes. Do it all on <span>Dozy Donut</span>.
+          Already have an account? <a href="#">Log in</a>
         </p>
       </div>
       <form novalidate>
-        <div>
+        <div class="form-group">
           <label for="username">
             <span>Username</span>
             <input
@@ -32,14 +38,14 @@
             <span class="error" aria-live="polite"></span>
           </label>
         </div>
-        <div>
+        <div class="form-group">
           <label for="email">
             <span>Email</span>
             <input type="email" name="email" id="email" />
             <span class="error" aria-live="polite"></span>
           </label>
         </div>
-        <div>
+        <div class="form-group">
           <label for="password">
             <span>Password</span>
             <input
@@ -58,7 +64,7 @@
             </span>
           </label>
         </div>
-        <button>Sign Up</button>
+        <button disabled id="btn">Sign Up</button>
         <p>
           By clicking the "Sign Up" button, you agree to the
           <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.

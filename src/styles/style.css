@@ -1,3 +1,9 @@
+:root {
+  --brown: rgb(117, 60, 16);
+  --pink: rgba(241, 118, 149, 0.8);
+  --lg-pink: rgba(241, 118, 149, 0.6);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,21 +13,31 @@
 html,
 body {
   height: 100vh;
-  width: 100vw;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
 }
 
+input,
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--brown);
+}
+
 #container {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  width: 38rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 #img-container {
+  margin-top: 1rem;
   width: 20rem;
   height: 20rem;
 }
@@ -29,4 +45,109 @@ body {
 #img {
   width: 100%;
   height: auto;
+}
+
+#container,
+#info,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin: 1rem 0;
+}
+
+#title > span {
+  display: block;
+  text-align: center;
+}
+
+.details {
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.details > span {
+  color: var(--pink);
+  font-weight: 700;
+}
+
+form {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-top: 0.8rem;
+}
+
+#info {
+  align-items: center;
+}
+
+label > span {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+label > input {
+  height: 2.2rem;
+  padding: 0 0.5rem;
+  outline: none;
+  transition: border 0.2s ease-out;
+  border: 0.13rem solid rgba(80, 80, 80, 0.2);
+}
+
+label > input:focus {
+  transition: border 0.2s ease-in;
+  border: 0.13rem solid var(--brown);
+}
+
+#password-reqs {
+  margin-top: 1rem;
+  list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.req::marker {
+  color: var(--brown);
+}
+
+.req {
+  flex: 0 50%;
+}
+
+#btn {
+  cursor: pointer;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  padding: 0.3rem 1.3rem;
+  background-color: var(--lg-pink);
+  border: none;
+  transition: 0.2s ease-out;
+}
+
+#btn:hover {
+  background-color: var(--pink);
+  transition: 0.2s ease-in;
+}
+
+#btn:disabled {
+  cursor: default;
+  background: none;
+  border: 0.13rem solid rgba(80, 80, 80, 0.2);
+}
+
+@media screen and (max-width: 630px) {
+  #container {
+    width: 30rem;
+  }
+
+  .req {
+    font-size: 0.9rem;
+  }
 }
