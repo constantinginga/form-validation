@@ -8,5 +8,8 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off"
+  }
 }
