@@ -41,7 +41,7 @@
         <div class="form-group">
           <label for="email">
             <span>Email</span>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
             <span class="error" aria-live="polite"></span>
           </label>
         </div>
@@ -53,8 +53,9 @@
               name="password"
               id="password"
               minlength="8"
+              required
             />
-            <span class="error" id="password-error" aria-live="polite">
+            <span id="password-error" aria-live="polite">
               <ul id="password-reqs">
                 <li class="req">One uppercase character</li>
                 <li class="req">One number</li>
