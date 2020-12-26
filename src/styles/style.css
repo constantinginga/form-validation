@@ -2,6 +2,7 @@
   --brown: rgb(117, 60, 16);
   --pink: rgba(241, 118, 149, 0.8);
   --lg-pink: rgba(241, 118, 149, 0.6);
+  --red: #f03;
 }
 
 * {
@@ -88,7 +89,7 @@ form {
   align-items: center;
 }
 
-label > span {
+label > span:first-of-type {
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -119,21 +120,34 @@ label > input:focus {
 
 .req {
   flex: 0 50%;
+  font-size: 1rem;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.error.active {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 #btn {
   cursor: pointer;
-  margin: 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   font-size: 1.1rem;
   padding: 0.3rem 1.3rem;
   background-color: var(--lg-pink);
+  border: 0.13rem solid var(--lg-pink);
   border: none;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 
 #btn:hover {
   background-color: var(--pink);
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in;
 }
 
 #btn:disabled {
